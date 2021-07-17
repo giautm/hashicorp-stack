@@ -1,0 +1,24 @@
+# Choose an optional name for the datacenter
+global:
+  name: consul
+  # datacenter: gcp
+
+# Enable the Consul Web UI via a NodePort
+ui:
+  service:
+    type: 'LoadBalancer'
+
+# Enable Connect for secure communication between nodes
+connectInject:
+  enabled: true
+
+client:
+  enabled: true
+syncCatalog:
+  enabled: true
+server:
+  disruptionBudget:
+    enabled: true
+    maxUnavailable: 0
+  extraConfig: |
+    {"translate_wan_addrs":true}

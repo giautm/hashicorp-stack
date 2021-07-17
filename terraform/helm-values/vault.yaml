@@ -1,0 +1,16 @@
+global:
+  enabled: true
+
+server:
+  service:
+    enabled: true
+  dev:
+    enabled: true
+  authDelegator:
+    enabled: false
+
+ui:
+  enabled: true
+  serviceType: "LoadBalancer"
+  serviceNodePort: null
+  externalPort: 8200
